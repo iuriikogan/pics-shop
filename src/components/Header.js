@@ -7,16 +7,20 @@ import LogoutButton from "../auth/LogoutButton";
 function Header() {
   const { isAuthenticated } = useAuth0();
   return (
-    <header>
+    <div className="container">
       <h2 className="nav-title">
         <Link to="/">Pics Shop</Link>
       </h2>
-      {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-      <Link to="/cart">
-        <i className="ri-shopping-cart-line ri-fw ri-2x"></i>
-      </Link>
-      <Link to="/profile">Profile</Link>
-    </header>
+      <header>
+        {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+        <Link to="/cart">
+          <i className="ri-shopping-cart-line">Cart</i>
+        </Link>
+        <Link to="/profile">
+          <i class="ri-profile-line ">Profile</i>
+        </Link>
+      </header>
+    </div>
   );
 }
 

@@ -4,7 +4,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 const LoginButton = () => {
   const { loginWithPopup } = useAuth0();
 
-  return <button onClick={() => loginWithPopup()}>Log In</button>;
+  return (
+    <i className="ri-login-box-line" onClick={() => loginWithPopup()}>
+      Login
+    </i>
+  );
 };
 
 export default LoginButton;
