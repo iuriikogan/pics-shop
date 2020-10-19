@@ -12,13 +12,13 @@ function Header() {
         <Link to="/">Pics Shop</Link>
       </h2>
       <header>
-        {isAuthenticated ? <LogoutButton /> : <LoginButton />}
         <Link to="/cart">
           <i className="ri-shopping-cart-line">Cart</i>
         </Link>
         <Link to="/profile">
           <i class="ri-profile-line ">Profile</i>
-        </Link>
+        </Link>{" "}
+        {isAuthenticated ? <LogoutButton /> : <LoginButton />}
       </header>
     </div>
   );
