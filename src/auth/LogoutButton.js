@@ -9,8 +9,7 @@ const LogoutButton = () => {
       className="ri-logout-box-line"
       onClick={() => logout({ returnTo: window.location.origin })}
     >
-      {" "}
-      Logout{" "}
+      Logout
     </i>
   );
 };
