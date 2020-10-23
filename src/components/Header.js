@@ -18,7 +18,7 @@ function Header() {
           <i className="ri-shopping-cart-line">Cart</i>
         </Link>
         <Link to="/profile">
-          <i class="ri-profile-line ">Profile</i>
+          <i className="ri-profile-line ">Profile</i>
         </Link>
         {/* if Is Authenticated render logout, if not render login */}
         {isAuthenticated ? <LogoutButton /> : <LoginButton />}
