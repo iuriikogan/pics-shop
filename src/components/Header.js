@@ -9,15 +9,18 @@ function Header() {
   return (
     <div className="container">
       <h2 className="nav-title">
-        <Link to="/">Pics Shop</Link>
+        <Link to="/">
+          <img src="../../public/assets/pics-logo.png" alt="picshop logo" />
+        </Link>
       </h2>
-      <header>
+      <header className="nav-items">
         <Link to="/cart">
           <i className="ri-shopping-cart-line">Cart</i>
         </Link>
         <Link to="/profile">
           <i class="ri-profile-line ">Profile</i>
-        </Link>{" "}
+        </Link>
+        {/* if Is Authenticated render logout, if not render login */}
         {isAuthenticated ? <LogoutButton /> : <LoginButton />}
       </header>
     </div>
